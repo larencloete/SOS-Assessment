@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="I.C.E.Views.SignupORLoginPage"
+             BackgroundImageSource="backgroundimg1">
+
+    <Grid Margin="10,10,10,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Text="Sign Up" Command="{Binding NavigateCommand }"
+                Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2"
+                BackgroundColor="#FF778899"
+                CornerRadius="10"
+                TextColor="Black"
+                  />
+
+        <Button Text="Login" Command="{Binding NavigateLoginCommand }"
+                Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4"
+                CornerRadius="10"
+                BackgroundColor="#FF778899"
+                  />
+
+        <Label Text="OR" 
+               Grid.Column="1" Grid.Row="3"
+               TextColor="Cyan" FontSize="Large"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+    </Grid>
+
+</ContentPage>
